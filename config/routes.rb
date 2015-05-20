@@ -1,3 +1,3 @@
 SwaggerEngine::Engine.routes.draw do
-  root 'swagger#index'
+  root to: 'swagger#index'
 end
