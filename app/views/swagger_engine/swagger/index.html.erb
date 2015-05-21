@@ -21,6 +21,7 @@
         url: url,
         dom_id: "swagger-ui-container",
         supportedSubmitMethods: ['get', 'post', 'put', 'delete', 'patch'],
+        apiKeyName: "access_token",
         onComplete: function(swaggerApi, swaggerUi){
           if(typeof initOAuth == "function") {
             initOAuth({
@@ -46,7 +47,7 @@
       function addApiKeyAuthorization(){
         var key = encodeURIComponent($('#input_apiKey')[0].value);
         if(key && key.trim() != "") {
-            var apiKeyAuth = new SwaggerClient.ApiKeyAuthorization("api_key", key, "query");
+            var apiKeyAuth = new SwaggerClient.ApiKeyAuthorization("access_token", key, "query");
             window.swaggerUi.api.clientAuthorizations.add("api_key", apiKeyAuth);
             log("added key " + key);
         }
@@ -55,10 +56,8 @@
       $('#input_apiKey').change(addApiKeyAuthorization);
 
       // if you have an apiKey you would like to pre-populate on the page for demonstration purposes...
-      /*
-        var apiKey = "myApiKeyXXXX123456789";
-        $('#input_apiKey').val(apiKey);
-      */
+      var apiKey = "f4138e046826678cfc2eccb91adca4becd9c88508f580ff8a70e612021de6210";
+      $('#input_apiKey').val(apiKey);
 
       window.swaggerUi.load();
 
