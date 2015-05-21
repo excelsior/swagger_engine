@@ -785,7 +785,7 @@
   padding: 6px 8px;
 }
 .swagger-section .swagger-ui-wrap ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation div.content div.sandbox_header span.response_throbber {
-  background-image: assets-url("swagger_engine/throbber.gif");
+  background-image: image-url('swagger_engine/throbber.gif');
   width: 128px;
   height: 16px;
   display: block;
@@ -1069,6 +1069,9 @@
 .swagger-section .swagger-ui-wrap form.form_box p strong {
   color: black;
 }
+.swagger-section .swagger-ui-wrap .operation-status td.markdown > p:last-child {
+  padding-bottom: 0;
+}
 .swagger-section .title {
   font-style: bold;
 }
@@ -1163,7 +1166,7 @@
   height: 18px;
   vertical-align: middle;
   display: inline-block;
-  background: assets-url("swagger_engine/explorer_icons.png") no-repeat;
+  background: image-url('swagger_engine/explorer_icons.png') no-repeat;
 }
 .swagger-section .ic-info {
   background-position: 0 0;
@@ -1203,7 +1206,7 @@
   font-size: 1.5em;
   font-weight: bold;
   text-decoration: none;
-  background: transparent assets-url("swagger_engine/logo_small.png") no-repeat left center;
+  background: transparent image-url('swagger_engine/logo_small.png') no-repeat left center;
   padding: 20px 0 20px 40px;
   color: white;
 }
