@@ -24,9 +24,9 @@
         onComplete: function(swaggerApi, swaggerUi){
           if(typeof initOAuth == "function") {
             initOAuth({
-              clientId: "your-client-id",
+              clientId: "eb375ad214060fb72ce50d7692a68e08736df9bb524d9c53306ecf44b55e209d",
               realm: "your-realms",
-              appName: "your-app-name"
+              appName: "FriendThem"
             });
           }
 
@@ -39,7 +39,7 @@
         onFailure: function(data) {
           log("Unable to Load SwaggerUI");
         },
-        docExpansion: "none",
+        docExpansion: "list",
         sorter : "alpha"
       });
 
