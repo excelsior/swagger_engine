@@ -9,3 +9,13 @@
 //= require 'swagger_engine/lib/highlight.7.3.pack.js'
 //= require 'swagger_engine/lib/marked.js'
 //= require 'swagger_engine/lib/swagger-oauth.js'
+
+$(function() {
+  $('#input_apiKey').change(function() {
+    var key = $('#input_apiKey')[0].value;
+    if (key && key.trim() != "") {
+      key = "Token token=" + key;
+      swaggerUi.api.clientAuthorizations.add("key", new SwaggerClient.ApiKeyAuthorization("Authorization", key, "header"));
+    }
+  });
+});
